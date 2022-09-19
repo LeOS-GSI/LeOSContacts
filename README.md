@@ -39,7 +39,3 @@ Additional features
 - "Jetpack Compose" by Google for the UI: https://developer.android.com/jetpack/compose
 - "Contact Store" by Alex Styl for accessing the contacts: https://github.com/alexstyl/contactstore
 
-## Contact
-* Florian Gubler
-* 2Gusoft@gmail.com
-* App entry in Google Play Store: [PrivateContacts](https://play.google.com/store/apps/details?id=ch.abwesend.privatecontacts)
