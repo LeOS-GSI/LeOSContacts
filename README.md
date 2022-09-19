@@ -1,11 +1,12 @@
-# Private Contacts #
+# LeOS Contacts #
 
-_Private Contacts_ is an Android app to manage your contacts with additional features for **privacy** and **data protection** not offered by your phone's default contacts app.
+_LeOS contacts is a googlefree Fork of Private Contacts._
+LeOS Contacts is an Android app to manage your contacts with additional features for **privacy** and **data protection** not offered by your phone's default contacts app.
 
 When any app (e.g. a messenger like WhatsApp) asks for permission to access your phone's contacts, the choice is purely binary: You either give it access to **all** your contacts or none of them. In that moment you will likely feel fine about sharing the phone-numbers of your friends who also have the same app installed, anyway. However, what about the phone number of your doctor, your therapist, etc.? Do you really want to provide that information to everyone asking? Often, the mere presence of that contact on your phone is enough to deduce a lot about your health, preferences and behavior.
 
 ## What the app can do right now
-Right now, the app simply offers you the typical functionalities of a contacts app without sharing its contacts with any other app. If an app has the permission to access the phone's contacts, it will **not** get those stored in _Private Contacts_ anyway.
+Right now, the app simply offers you the typical functionalities of a contacts app without sharing its contacts with any other app. If an app has the permission to access the phone's contacts, it will **not** get those stored in _LeOS Contacts_ anyway.
 
 The app supports caller-detection, displaying a notification if a known contact is calling you. Unfortunately, that depends heavily on manufacturer and Android version. For that reason it is not 100% reliable yet (feedback is very welcome).
 
@@ -17,7 +18,7 @@ Additional features
   - Moving contacts from the standard Android database to the app (and removing them from the standard database so they are no longer visible to other apps)
   - Editing existing contacts from the standard Android database
   - Creating new contacts in the standard Android database
-  - Moving contacts from Private Contacts back the the standard Android contact database
+  - Moving contacts from LeOS Contacts back the the standard Android contact database
 - Support of Imports/Exports in vcf format
 - Support of additional features of a contact app
   - Profile images
