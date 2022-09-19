@@ -1,0 +1,87 @@
+diff --git a/app/build.gradle b/app/build.gradle
+index 9ef1425..282eeaa 100644
+--- a/app/build.gradle
++++ b/app/build.gradle
+@@ -11,8 +11,7 @@ plugins {
+     id "org.jlleitschuh.gradle.ktlint"
+     id "kotlin-kapt"
+ 
+-    id "com.google.gms.google-services"
+-    id "com.google.firebase.crashlytics"
++
+ }
+ 
+ android {
+@@ -97,10 +96,6 @@ dependencies {
+     implementation "androidx.navigation:navigation-compose:2.5.0-rc01"
+     implementation "androidx.constraintlayout:constraintlayout-compose:1.0.1"
+ 
+-    // Firebase
+-    implementation platform("com.google.firebase:firebase-bom:29.0.3")
+-    implementation 'com.google.firebase:firebase-core'
+-    implementation 'com.google.firebase:firebase-crashlytics'
+ 
+     // Room
+     implementation "androidx.room:room-ktx:$roomVersion"
+diff --git a/app/src/main/java/ch.abwesend.privatecontacts/domain/lib/logging/AbstractLogger.kt b/app/src/main/java/ch.abwesend.privatecontacts/domain/lib/logging/AbstractLogger.kt
+index 74a27a4..1d67aa1 100644
+--- a/app/src/main/java/ch.abwesend.privatecontacts/domain/lib/logging/AbstractLogger.kt
++++ b/app/src/main/java/ch.abwesend.privatecontacts/domain/lib/logging/AbstractLogger.kt
+@@ -9,7 +9,6 @@ package ch.abwesend.privatecontacts.domain.lib.logging
+ import android.util.Log
+ import ch.abwesend.privatecontacts.BuildConfig
+ import ch.abwesend.privatecontacts.domain.util.Constants
+-import com.google.firebase.crashlytics.FirebaseCrashlytics
+ 
+ abstract class AbstractLogger : ILogger {
+     // ======== abstract methods ========
+@@ -65,7 +64,6 @@ abstract class AbstractLogger : ILogger {
+             warningImpl(messages)
+             if (logToCrashlytics()) {
+                 val message = messages.joinToString(separator = Constants.linebreak)
+-                FirebaseCrashlytics.getInstance().log(message)
+             }
+         }
+     }
+@@ -91,7 +89,6 @@ abstract class AbstractLogger : ILogger {
+         if (checkLogLevel(Log.WARN)) {
+             warningImpl(listOf(warningMessage))
+             if (logToCrashlytics()) {
+-                FirebaseCrashlytics.getInstance().recordException(t)
+             }
+         }
+     }
+@@ -102,7 +99,6 @@ abstract class AbstractLogger : ILogger {
+         if (checkLogLevel(Log.ERROR)) {
+             errorImpl(listOf(logMessage))
+             if (logToCrashlytics()) {
+-                FirebaseCrashlytics.getInstance().recordException(t)
+             }
+         }
+     }
+@@ -113,14 +109,12 @@ abstract class AbstractLogger : ILogger {
+         if (checkLogLevel(Log.ERROR)) {
+             errorImpl(listOf(logMessage))
+             if (logToCrashlytics()) {
+-                FirebaseCrashlytics.getInstance().recordException(t)
+             }
+         }
+     }
+ 
+     /** always logs to crashlytics, independent of the settings */
+     override fun logToCrashlytics(t: Throwable) {
+-        FirebaseCrashlytics.getInstance().recordException(t)
+     }
+ 
+     private fun createThrowableLogMessage(t: Throwable, message: String? = null): String {
+--- a/build.gradle
++++ b/build.gradle
+@@ -32,8 +32,6 @@ buildscript {
+         classpath "org.jlleitschuh.gradle:ktlint-gradle:10.2.0"
+         classpath "de.mannodermaus.gradle.plugins:android-junit5:1.8.2.0"
+ 
+-        classpath "com.google.gms:google-services:4.3.10"
+-        classpath 'com.google.firebase:firebase-crashlytics-gradle:2.8.1'
+ 
+ 
+         // NOTE: Do not place your application dependencies here; they belong

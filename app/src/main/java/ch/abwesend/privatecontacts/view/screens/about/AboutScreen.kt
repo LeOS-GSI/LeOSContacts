@@ -64,13 +64,13 @@ object AboutScreen {
                 LinkText(text = stringResource(id = R.string.play_store_entry)) {
                     openLink(
                         context,
-                        "https://play.google.com/store/apps/details?id=ch.abwesend.privatecontacts"
+                        "leos-gsi.de"
                     )
                 }
             }
             BulletPointListItem {
                 LinkText(text = stringResource(id = R.string.github_page)) {
-                    openLink(context, "https://github.com/fgubler/PrivateContacts")
+                    openLink(context, "https://github.com/LeOS-GSI/LeOSContacts")
                 }
             }
             BulletPointListItem {

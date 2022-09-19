@@ -5,7 +5,7 @@
   -->
 
 <resources>
-    <string name="app_name">Private Contacts</string>
+    <string name="app_name">LeOS Contacts</string>
     <string name="screen_contact_list">Contacts</string>
     <string name="screen_settings">Settings</string>
     <string name="screen_about_the_app">About</string>
@@ -130,17 +130,17 @@
     <string name="about_app_description">The idea of this app is to store contacts which should not be shared with other apps on the device.</string>
     <string name="contact_developers_title">Contact the Developers</string>
     <string name="contact_developers_text">We are always happy about feedback about how to improve the app further.</string>
-    <string name="play_store_entry">PlayStore entry</string>
+    <string name="play_store_entry">LeOS Homepage</string>
     <string name="github_page">Github page</string>
     <string name="report_error_github">Report a bug on Github</string>
     <string name="report_error">Report a bug</string>
     <string name="write_email">Write an email</string>
     <string name="privacy_title">Privacy Declaration</string>
     <string name="legal_disclaimer_title">Legal Disclaimer</string>
-    <string name="legal_disclaimer_text">The software is provided as-is. The developers refuse any liability or accountability for any damages or losses occurring due to its use.</string>
+    <string name="legal_disclaimer_text">Special Thx to fgubler for the original app. The software is provided as-is. The developers refuse any liability or accountability for any damages or losses occurring due to its use ----- Special tanks to Harvey186. He has removed all Google Trackers.</string>
 
     <string name="permissions">Permissions</string>
-    <string name="app_introduction_description">Welcome to "Private Contacts".\n\nThe goal of this app is to allow you to store contacts which you do not want to share with the other apps on your device.\n\nFor now, that is all the app does: A clone of the normal contacts app which does not share any contacts you create.\n\nIn the future, additional functionality will be added to also manage your "normal" contacts in this app and declare for each contact separately whether it should be shared with other apps or not.</string>
+    <string name="app_introduction_description">Welcome to "LeOS Contacts".\n\nThe goal of this app is to allow you to store contacts which you do not want to share with the other apps on your device.\n\nFor now, that is all the app does: A clone of the normal contacts app which does not share any contacts you create.\n\nIn the future, additional functionality will be added to also manage your "normal" contacts in this app and declare for each contact separately whether it should be shared with other apps or not.</string>
 
     <string name="light_theme">Light</string>
     <string name="dark_theme">Dark</string>
